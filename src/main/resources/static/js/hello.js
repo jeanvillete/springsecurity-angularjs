@@ -13,9 +13,9 @@ angular.module( 'hello', [ 'ngRoute' ] )
 		$httpProvider.defaults.headers.common[ "X-Requested-With" ] = 'XMLHttpRequest';
 	}).controller( 'HomeController', function( $http ) {
 		var vm = this;
-		vm.greeting = { id : 'xxx', content : 'Hello World!' }
+		vm.greeting = { id : 'xxx', content : 'Local content!' }
 		
-		$http.get( 'http://localhost:9000/resource' ).then( function( response ) {
+		$http.get( 'http://localhost:9000/' ).then( function( response ) {
 			vm.greeting = response.data;
 		});
 	}).controller( 'NavigationController', function( $rootScope, $http, $location ){
