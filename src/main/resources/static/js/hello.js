@@ -15,7 +15,7 @@ angular.module( 'hello', [ 'ngRoute' ] )
 		var vm = this;
 		vm.greeting = { id : 'xxx', content : 'Hello World!' }
 		
-		$http.get( '/resource' ).then( function( response ) {
+		$http.get( 'http://localhost:9000/resource' ).then( function( response ) {
 			vm.greeting = response.data;
 		});
 	}).controller( 'NavigationController', function( $rootScope, $http, $location ){
